@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анастасия К. — вёрстка лендингов | Pixel-Perfect, Tailwind, Bootstrap, WordPress</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="assets/styles/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.min.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="body antialiased">
+    <header class="fixed top-0 left-0 right-0 z-[100] bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+            <!-- Логотип / Имя -->
+            <div class="flex items-center gap-3 group lg:w-[217px]">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center border border-[#252525] overflow-hidden">
+                    <img src="./assets/images/logo.png" alt="Anastasia" class="object-cover">
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white group-hover:text-[#06ffd2] transition">
+                    Анастасия К.
+                    </div>
+                    <div class="text-xs text-[#a0a0a0] -mt-0.5">
+                    вёрстка лендингов
+                    </div>
+                </div>
+            </div>
+
+            <!-- Навигация десктоп -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Услуги</a>
+                <a href="#portfolio" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Портфолио</a>
+                <a href="#process" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Процесс</a>
+                <a href="#skills" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Навыки</a>
+            </nav>
+
+            <!-- Кнопка действия + мобильное меню -->
+            <div class="flex items-center gap-4">
+                <a href="https://t.me/pawrun" target="_blank"
+                    class="hidden lg:block px-4 py-2 rounded-xl bg-gradient-to-r from-[#06ffd2] to-[#d946ff] text-[#0f0f0f] font-medium hover:shadow-lg hover:shadow-[#06ffd2]/30 transition-all">
+                    Написать в Telegram
+                </a>
+
+                <!-- Мобильная кнопка меню (гамбургер) -->
+                <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Мобильное меню (выезжает снизу) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
+            <nav class="flex flex-col py-6 px-8 space-y-6 text-center">
+            <a href="#about"     class="text-lg text-[#a0a0a0] hover:text-white transition">Обо мне</a>
+            <a href="#skills"    class="text-lg text-[#a0a0a0] hover:text-white transition">Навыки</a>
+            <a href="#portfolio" class="text-lg text-[#a0a0a0] hover:text-white transition">Портфолио</a>
+            <a href="#process"   class="text-lg text-[#a0a0a0] hover:text-white transition">Процесс</a>
+            <a href="#contact"   class="text-lg text-[#a0a0a0] hover:text-white transition">Контакты</a>
+            <a href="https://t.me/pawrun" target="_blank"
+                class="mt-4 px-8 py-4 rounded-xl bg-gradient-to-r from-[#06ffd2] to-[#d946ff] text-[#0f0f0f] font-semibold">
+                Написать в Telegram
+            </a>
+            </nav>
+        </div>
+</header>
+    <main class="main">
+        <section class="relative lg:min-h-[90vh] flex items-center justify-center overflow-hidden px-6 pt-[140px] pb-20 lg:px-6 lg:py-20">
+            <div class="absolute inset-0 opacity-30">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#06ffd2] rounded-full blur-[150px] animate-pulse"></div>
+                <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#d946ff] rounded-full blur-[150px] animate-pulse" style="animation-delay: 1s;"></div>
+            </div>
+            <div class="max-w-7xl mx-auto w-full relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 lg:order-1" style="opacity: 1; transform: none;">
+                        <div class="relative rounded-3xl overflow-hidden border border-[#252525] shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#06ffd2]/20 to-[#d946ff]/20 mix-blend-overlay"></div>
+                            <img src="./assets/images/hero-img.jpg" alt="Анастасия" class="w-full h-auto aspect-[3/4] object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#06ffd2] to-[#d946ff] p-4 rounded-2xl shadow-xl" style="opacity: 1; transform: none;">
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+                                    <path d="M20 2v4"></path>
+                                    <path d="M22 4h-4"></path>
+                                    <circle cx="4" cy="20" r="2"></circle>
+                                </svg>
+                                <div class="text-[#0f0f0f]">
+                                    <div class="text-sm opacity-80">Опыт</div>
+                                    <div class="font-medium">3+ года</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-8" style="opacity: 1; transform: none;">
+                        <div class="inline-block">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#252525]" style="opacity: 1; transform: none;">
+                                <span class="w-2 h-2 rounded-full bg-[#06ffd2] animate-pulse"></span>
+                                <span class="text-sm">Открыта к новым проектам</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <h1 class="hero-title bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent" style="opacity: 1; transform: none;">Привет, я&nbsp;Анастасия!</h1>
+                            <h2 class="section-title text-[#fafafa]" style="opacity: 1; transform: none;">Верстаю лендинги по&nbsp;макетам Figma и Pixso</h2>
+                        </div>
+                        <p class="text-[#a0a0a0] max-w-xl" style="opacity: 1; transform: none;">Создаю лендинги и многостраничники на HTML/CSS/JS и WordPress. Типичный лендинг из 7–10&nbsp;блоков — 3–5&nbsp;дней. Pixel-perfect вёрстка, адаптивные и&nbsp;удобные интерфейсы и&nbsp;внимание к&nbsp;деталям.</p>
+                        <div class="flex flex-wrap gap-4" style="opacity: 1; transform: none;">
+                            <a href="https://t.me/pawrun" class="group grow inline-flex justify-center items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#06ffd2] to-[#d946ff] text-[#0f0f0f] font-medium rounded-xl hover:shadow-lg hover:shadow-[#06ffd2]/50 transition-all duration-300">
+                                Написать в Telegram
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7 7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#portfolio" class="inline-flex justify-center grow items-center px-8 py-4 border-2 border-[#252525] text-white font-medium rounded-xl hover:border-[#06ffd2] hover:bg-[#06ffd2]/5 transition-all duration-300">
+                                Посмотреть портфолио
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-20 pb-10 lg:py-20 px-6 relative">
+            <div class="" style="opacity: 1; transform: none;">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="stat-card group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#06ffd2] to-[#0ea5e9] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06ffd2] to-[#0ea5e9] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#0f0f0f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M16 3.128a4 4 0 0 1 0 7.744 M22 21v-2a4 4 0 0 0-3-3.87" />
+                                    <circle cx="9" cy="7" r="4" />
+                                </svg>
+                                </div>
+                                <div class="text-4xl font-bold mb-2 bg-gradient-to-r from-[#06ffd2] to-[#0ea5e9] bg-clip-text text-transparent">15+</div>
+                                <div class="text-[#a0a0a0]">Коммерческих проектов</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#d946ff] to-[#f97316] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#d946ff] to-[#f97316] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="m16 18 6-6-6-6"></path>
+                                    <path d="m8 6-6 6 6 6"></path>
+                                </svg>
+                                </div>
+                                <div class="text-4xl font-bold mb-2 bg-gradient-to-r from-[#d946ff] to-[#f97316] bg-clip-text text-transparent">100%</div>
+                                <div class="text-[#a0a0a0]">Pixel-perfect</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#06ffd2] to-[#10b981] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06ffd2] to-[#10b981] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#0f0f0f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                                </svg>
+                                </div>
+                                <div class="text-4xl font-bold mb-2 bg-gradient-to-r from-[#06ffd2] to-[#10b981] bg-clip-text text-transparent">3–5 дней</div>
+                                <div class="text-[#a0a0a0]">Срок вёрстки лендинга</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#d946ff] to-[#06ffd2] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#d946ff] to-[#06ffd2] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#0f0f0f]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                    <circle cx="12" cy="8" r="6" />
+                                </svg>
+                                </div>
+                                <div class="text-4xl font-bold mb-2 bg-gradient-to-r from-[#d946ff] to-[#06ffd2] bg-clip-text text-transparent">100%</div>
+                                <div class="text-[#a0a0a0]">Проектов сданы в срок</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-20 pb-10 lg:py-20 px-6 relative" id="services">
+            <div class="" style="opacity: 1; transform: none;">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#252525] mb-6" style="opacity: 1; transform: none;">
+                            <span class="text-sm bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">Услуги</span>
+                        </div>
+                        <h2 class="section-title mb-4">Что я делаю и сколько это стоит</h2>
+                        <p class="text-[#a0a0a0] max-w-2xl mx-auto">Выберите подходящий пакет услуг. Все проекты включают чистый код, адаптивность и современные технологии.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="services-item relative group transition-all duration-300">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                                <div class="px-4 py-1 rounded-full bg-gradient-to-r from-[#06ffd2] to-[#d946ff] text-[#0f0f0f] text-sm">Популярно</div>
+                            </div>
+                            <div class="relative h-full p-8 rounded-2xl bg-[#1a1a1a] border transition-all duration-300 border-[#06ffd2]/50 shadow-lg shadow-[#06ffd2]/20 overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#d946ff] to-[#f97316] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#06ffd2] to-[#0ea5e9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-laptop w-8 h-8 text-[#0f0f0f]" aria-hidden="true">
+                                            <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path>
+                                            <path d="M20.054 15.987H3.946"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-2">Лендинг / Сайт-визитка</h3>
+                                    <div class="text-3xl font-bold mb-4 bg-gradient-to-r from-[#06ffd2] to-[#0ea5e9] bg-clip-text text-transparent">от 10 000 ₽</div>
+                                    <div class="space-y-3 mb-8 flex-grow">
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">3–5 рабочих дней</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">До 10 уникальных блоков</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Адаптивная вёрстка (мобильная + планшет + десктоп)</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Пиксель-перфектная вёрстка по макету</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Слайдеры, табы, аккордеоны, модальные окна</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Формы с валидацией и отправкой</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Оптимизация изображений и скорости загрузки</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Кроссбраузерность (Chrome, Firefox, Safari, Edge)</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Неограниченные правки до полного соответствия макету</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Передача чистого кода + всех исходников</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://t.me/pawrun" target="_blank" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full bg-gradient-to-r from-[#06ffd2] to-[#d946ff] text-[#0f0f0f] hover:shadow-lg hover:shadow-[#06ffd2]/30 transition-all duration-300">
+                                        Заказать
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-item relative group transition-all duration-300">
+                            <div class="relative h-full p-8 rounded-2xl bg-[#1a1a1a] border transition-all duration-300 border-[#252525] hover:border-[#252525] overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#06ffd2] to-[#0ea5e9] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#d946ff] to-[#f97316] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-8 h-8 text-[#0f0f0f]" aria-hidden="true">
+                                            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                                            <path d="M12 18h.01"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-2">Многостраничный сайт</h3>
+                                    <div class="text-3xl font-bold mb-4 bg-gradient-to-r from-[#d946ff] to-[#f97316] bg-clip-text text-transparent">от 20 000 ₽</div>
+                                    <div class="space-y-3 mb-8 flex-grow">
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">От 7 дней</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Всё то же самое, что в лендинге</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Уникальная вёрстка каждой страницы</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Общая шапка и подвал с правильной навигацией</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Фильтры и сортировка в портфолио/каталоге (если есть в макете)</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://t.me/pawrun" target="_blank" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full bg-[#252525] hover:bg-[#2a2a2a] text-white transition-all duration-300">
+                                        Заказать
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-item relative group transition-all duration-300">
+                            <div class="relative h-full p-8 rounded-2xl bg-[#1a1a1a] border transition-all duration-300 border-[#252525] hover:border-[#252525] overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#06ffd2] to-[#d946ff] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#06ffd2] to-[#d946ff] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-8 h-8 text-[#0f0f0f]" aria-hidden="true">
+                                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-2">Перенос вёрстки на WordPress</h3>
+                                    <div class="text-3xl font-bold mb-4 bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">от +5 000 ₽*</div>
+                                    <div class="space-y-3 mb-8 flex-grow">
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">+2–3 дня*</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Установка и базовая настройка WordPress</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Собственная тема WordPress</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Подключение/кастомизация плагинов</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">SEO-оптимизация (правильные заголовки, мета-теги, ЧПУ)</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Подключение форм</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Базовая защита от спама</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#06ffd2] flex-shrink-0 mt-0.5" aria-hidden="true">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#d0d0d0]">Инструкция по работе с админкой</span>
+                                        </div>
+                                        <div class="text-sm text-[#a0a0a0]">*Добавляется к любой из услуг</div>
+                                    </div>
+                                    <a href="https://t.me/pawrun" target="_blank" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 px-4 py-2 has-[&gt;svg]:px-3 w-full bg-[#252525] hover:bg-[#2a2a2a] text-white transition-all duration-300">
+                                        Заказать
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-20 pb-10 lg:py-24 px-6" id="portfolio">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="inline-block px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#252525] mb-6" style="opacity: 1; transform: none;">
+                        <span class="text-sm bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">Портфолио</span>
+                    </div>
+                    <h2 class="section-title mb-4">Мои проекты</h2>
+                    <p class="text-[#a0a0a0] text-lg max-w-2xl mx-auto">
+                        Подборка коммерческих работ: лендинги, многостраничники и перенос на WordPress
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card group flex transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="./assets/images/projects/project-7.jpg" alt="Название проекта" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="mb-3 text-xl">Лендинг для чемпионата «TUSUR GAMES»</h3>
+                                <div class="text-[#a0a0a0] text-sm mb-4">Вёрстка лендинга + подключение форм Битрикс24</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">HTML</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">CSS</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">JavaScript</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">Bootstrap</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">Swiper</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group flex transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="./assets/images/projects/project-1.jpg" alt="Название проекта" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="mb-3 text-xl">Страница для сайта веб‑студии</h3>
+                                <div class="text-[#a0a0a0] text-sm mb-4">Вёрстка страницы с интерактивными анимациями + натяжка врестки на WordPress</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#d946ff] to-[#f97316] border border-[#252525]">HTML</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#d946ff] to-[#f97316] border border-[#252525]">CSS</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#d946ff] to-[#f97316] border border-[#252525]">JavaScript</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#d946ff] to-[#f97316] border border-[#252525]">PHP</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#d946ff] to-[#f97316] border border-[#252525]">WordPress</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#d946ff] to-[#f97316] border border-[#252525]">AOS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group flex transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="./assets/images/projects/project-2.jpg" alt="Название проекта" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="mb-3 text-xl">Лендинг для Открытой олимпиады ТУСУР</h3>
+                                <div class="text-[#a0a0a0] text-sm mb-4">Вёрстка лендинга + подключение форм Битрикс24</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#04cea9] to-[#d946ff] border border-[#252525]">HTML</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#04cea9] to-[#d946ff] border border-[#252525]">CSS</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#04cea9] to-[#d946ff] border border-[#252525]">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group flex transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="./assets/images/projects/project-3.jpg" alt="Название проекта" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="mb-3 text-xl">Сайт приёмной комиссии ФДО ТУСУР</h3>
+                                <div class="text-[#a0a0a0] text-sm mb-4">Вёрстка многостраничного сайта</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">HTML</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">CSS</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">JavaScript</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">Bootstrap</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">Owl Carousel</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">Imask.js</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">WOW.js</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#10b981] to-[#0ea5e9] border border-[#252525]">Animate.css</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group flex transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="./assets/images/projects/project-4.jpg" alt="Название проекта" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="mb-3 text-xl">Лендинг для бизнеса «Посуточный прокат прицепов»</h3>
+                                <div class="text-[#a0a0a0] text-sm mb-4">Вёрстка лендинга + дизайн + валидация и отправка форм</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#f97316] to-[#d946ff] border border-[#252525]">HTML</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#f97316] to-[#d946ff] border border-[#252525]">CSS</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#f97316] to-[#d946ff] border border-[#252525]">JavaScript</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#f97316] to-[#d946ff] border border-[#252525]">Bootstrap</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#f97316] to-[#d946ff] border border-[#252525]">PHPMailer</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#f97316] to-[#d946ff] border border-[#252525]">jquery.mask</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card group flex transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="relative aspect-[4/3] overflow-hidden">
+                                <img src="./assets/images/projects/project-6.jpg" alt="Название проекта" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="mb-3 text-xl">Сайт для бизнеса «Выкуп автомобилей в Томске»</h3>
+                                <div class="text-[#a0a0a0] text-sm mb-4">WordPress + верстка на Elementor + подключение форм (Contact Form 7 и WP Mail SMTP) + подключение и настройка плагинов</div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">HTML</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">CSS</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">JavaScript</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">PHP</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">WordPress</span>
+                                    <span class="px-3 py-1 rounded-full text-xs bg-gradient-to-r from-[#0ea5e9] to-[#10b981] border border-[#252525]">Elementor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="pt-20 pb-10 lg:py-20 px-6 relative">
+            <div class="" style="opacity: 1; transform: none;">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#252525] mb-6" style="opacity: 1; transform: none;">
+                            <span class="text-sm bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">Процесс работы</span>
+                        </div>
+                        <h2 class="section-title mb-4">Как я работаю</h2>
+                        <p class="text-[#a0a0a0] max-w-2xl mx-auto">Прозрачный процесс от обсуждения до запуска. Всегда на связи и в курсе прогресса.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="process-item group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-[#04cea9] to-[#d946ff] flex items-center justify-center text-[#ffffff] font-bold text-sm">
+                            1
+                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06ffd2] to-[#0ea5e9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl mb-3">Присылаете макет</h3>
+                            <p class="text-[#a0a0a0] text-sm leading-relaxed">Считаю точную стоимость и сроки</p>
+                        </div>
+
+                        <div class="process-item group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-[#04cea9] to-[#d946ff] flex items-center justify-center text-[#ffffff] font-bold text-sm">
+                            2
+                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0ea5e9] to-[#d946ff] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-search w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                            <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+                                            <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                                            <circle cx="11.5" cy="14.5" r="2.5"></circle>
+                                            <path d="M13.3 16.3 15 18"></path>
+                                        </svg>
+                                </div>
+                            <h3 class="text-xl mb-3">Согласование</h3>
+                            <p class="text-[#a0a0a0] text-sm leading-relaxed">Согласовываем сроки и вносим предоплату 50%</p>
+                        </div>
+
+                        <div class="process-item group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-[#04cea9] to-[#d946ff] flex items-center justify-center text-[#ffffff] font-bold text-sm">
+                            3
+                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#d946ff] to-[#f97316] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="m16 18 6-6-6-6"></path>
+                                    <path d="m8 6-6 6 6 6"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl mb-3">Делаю вёрстку</h3>
+                            <p class="text-[#a0a0a0] text-sm leading-relaxed">Выкладываю на свой хостинг для проверки</p>
+                        </div>
+
+                        <div class="process-item group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-[#04cea9] to-[#d946ff] flex items-center justify-center text-[#ffffff] font-bold text-sm">
+                            4
+                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#f97316] to-[#10b981] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-test-tube w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"></path>
+                                    <path d="M8.5 2h7"></path>
+                                    <path d="M14.5 16h-5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl mb-3">Правки</h3>
+                            <p class="text-[#a0a0a0] text-sm leading-relaxed">Безлимитные правки до полного соответствия макету</p>
+                        </div>
+
+                        <div class="process-item group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-[#04cea9] to-[#d946ff] flex items-center justify-center text-[#ffffff] font-bold text-sm">
+                            5
+                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#10b981] to-[#06ffd2] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl mb-3">Запуск</h3>
+                            <p class="text-[#a0a0a0] text-sm leading-relaxed">После финальной оплаты передаю чистый код + исходники через FTP/архив</p>
+                        </div>
+
+                        <div class="process-item group relative p-8 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/50 transition-all duration-300">
+                            <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-[#04cea9] to-[#d946ff] flex items-center justify-center text-[#ffffff] font-bold text-sm">
+                            6
+                            </div>
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06ffd2] to-[#d946ff] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones w-7 h-7 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl mb-3">Поддержка</h3>
+                            <p class="text-[#a0a0a0] text-sm leading-relaxed">Остаюсь на связи для правок и консультаций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-1/4 lg:top-1/2 left-1/4 w-96 h-96 bg-[#06ffd2] rounded-full blur-[150px] animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-0 lg:top-1/2 right-1/4 w-96 h-96 bg-[#d946ff] rounded-full blur-[150px] animate-pulse"></div>
+            </div>
+            <div class="relative" style="opacity: 1; transform: none;">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#252525] mb-6" style="opacity: 1; transform: none;">
+                            <span class="text-sm bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">Навыки</span>
+                        </div>
+                        <h2 class="section-title section-title mb-4">Мои навыки и инструменты</h2>
+                        <p class="text-[#a0a0a0] max-w-2xl mx-auto">Работаю с современными инструментами и технологиями</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                        <div class="lg:order-1 to-right group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#06ffd2] to-[#0ea5e9] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="m16 18 6-6-6-6"></path>
+                                    <path d="m8 6-6 6 6 6"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">HTML &amp; CSS + SCSS / Less</h4>
+                                <p class="text-sm text-[#a0a0a0]">Семантическая вёрстка, Grid/Flexbox, анимации, БЭМ</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-3 to-right group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f97316] to-[#10b981] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">JavaScript + jQuery</h4>
+                                <p class="text-sm text-[#a0a0a0]">Слайдеры, табы, аккордеоны, модальные окна, валидация форм</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-5 to-right group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0ea5e9] to-[#d946ff] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-figma w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+                                    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+                                    <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path>
+                                    <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+                                    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">Figma / Pixso / Photoshop</h4>
+                                <p class="text-sm text-[#a0a0a0]">Точная работа с макетами</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-6 to-left group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#d946ff] to-[#f97316] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                    <path d="M3 9h18"></path>
+                                    <path d="M9 21V9"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">WordPress</h4>
+                                <p class="text-sm text-[#a0a0a0]">Перенос вёрстки на WordPress</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-8 to-left group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f97316] to-[#10b981] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path>
+                                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">Bootstrap 5, Tailwind CSS</h4>
+                                <p class="text-sm text-[#a0a0a0]">Utility-first подход</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-2 to-left group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#10b981] to-[#06ffd2] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                                    <path d="M12 18h.01"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">Адаптивная вёрстка</h4>
+                                <p class="text-sm text-[#a0a0a0]">Pixel Perfect, соответствие макету на всех устройствах</p>
+                            </div>
+                        </div>
+
+                        <div class="lg:order-4 to-left group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#d946ff] to-[#06ffd2] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                    <path d="M2 12h20"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">Кроссбраузерность</h4>
+                                <p class="text-sm text-[#a0a0a0]">Поддержка современных браузеров</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-7 to-right group transition-all duration-300 relative p-6 rounded-2xl bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2]/30 transition-all duration-300 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#10b981] to-[#06ffd2] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers w-6 h-6 text-[#0f0f0f]" aria-hidden="true">
+                                    <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path>
+                                    <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path>
+                                    <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="skills-title mb-1">Gulp</h4>
+                                <p class="text-sm text-[#a0a0a0]">Автоматизация: минификация, автопрефиксы, оптимизация изображений</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-20 px-6 relative border-t border-[#252525]">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <div class="lg:col-span-2" style="opacity: 1; transform: none;">
+                        <h3 class="mb-4 bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">Анастасия</h3>
+                        <p class="text-[#a0a0a0] mb-6 max-w-md">Создаю современные сайты с чистым кодом и pixel-perfect точностью. Готова воплотить ваш проект в жизнь.</p>
+                        <div class="flex gap-4">
+                            <a href="mailto:anastasiabones@gmail.com" class="w-10 h-10 rounded-lg bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2] flex items-center justify-center transition-all duration-300 group" tabindex="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-5 h-5 text-[#a0a0a0] group-hover:text-[#06ffd2] transition-colors" aria-hidden="true">
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                </svg>
+                            </a>
+                            <a href="https://t.me/pawrun" target="_blank" class="w-10 h-10 rounded-lg bg-[#1a1a1a] border border-[#252525] hover:border-[#06ffd2] flex items-center justify-center transition-all duration-300 group" tabindex="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="lucide lucide-tg w-6 h-6 text-[#a0a0a0] group-hover:text-[#06ffd2] transition-colors">
+                                    <g fill="none" fill-rule="evenodd">
+                                    <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M21.84 6.056a1.5 1.5 0 0 0-2.063-1.626l-17.1 7.2c-1.192.502-1.253 2.226 0 2.746a57 57 0 0 0 3.774 1.418c1.168.386 2.442.743 3.463.844c.279.334.63.656.988.95c.547.45 1.205.913 1.885 1.357c1.362.89 2.873 1.741 3.891 2.295c1.217.66 2.674-.1 2.892-1.427zM4.594 12.993l15.124-6.368l-2.118 12.84c-.999-.543-2.438-1.356-3.72-2.194a20 20 0 0 1-1.709-1.229a8 8 0 0 1-.426-.374l3.961-3.96a1 1 0 0 0-1.414-1.415L9.955 14.63c-.734-.094-1.756-.366-2.878-.736a49 49 0 0 1-2.482-.902Z"/></g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="opacity: 1; transform: none;">
+                        <h4 class="mb-4">Навигация</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#services" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Услуги</a></li>
+                            <li><a href="#portfolio" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Портфолио</a></li>
+                            <li><a href="#process" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Процесс</a></li>
+                            <li><a href="#skills" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">Навыки</a></li>
+                        </ul>
+                    </div>
+                    <div style="opacity: 1; transform: none;">
+                        <h4 class="mb-4">Контакты</h4>
+                        <ul class="space-y-3">
+                            <li><a href="mailto:anastasiabones@gmail.com" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">anastasiabones@gmail.com</a></li>
+                            <li class="text-[#a0a0a0]">Telegram: <a href="https://t.me/pawrun" target="_blank" class="text-[#a0a0a0] hover:text-[#06ffd2] transition-colors">@pawrun</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-[#252525] flex flex-row justify-start items-center gap-4" style="opacity: 1; transform: none;">
+                    <button class="totop-btn w-10 h-10 rounded-lg bg-gradient-to-r from-[#06ffd2] to-[#d946ff] flex items-center justify-center hover:shadow-lg hover:shadow-[#06ffd2]/30 transition-all duration-300 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up w-5 h-5 text-[#0f0f0f] group-hover:-translate-y-1 transition-transform" aria-hidden="true">
+                            <path d="m5 12 7-7 7 7"></path>
+                            <path d="M12 19V5"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </footer>
+        <button class="mogal-btn fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full bg-gradient-to-r from-[#06ffd2] to-[#d946ff] shadow-lg shadow-[#06ffd2]/50 flex items-center justify-center group" tabindex="0" style="opacity: 1; transform: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-7 h-7 text-[#0f0f0f] group-hover:scale-110 transition-transform" aria-hidden="true">
+                <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-7 h-7 text-[#0f0f0f] hidden" aria-hidden="true">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+            </svg>
+        </button>
+
+        <div class="mogal-window fixed bottom-28 right-8 z-50 w-96 max-w-[calc(100vw-4rem)] rounded-2xl bg-[#1a1a1a] border border-[#252525] shadow-2xl overflow-hidden opacity-0 hidden duration-300 transition-all">
+            <div class="p-6 bg-gradient-to-r from-[#06ffd2] to-[#d946ff]">
+                <h4 class="text-[#0f0f0f]">Написать мне</h4>
+                <p class="text-sm text-[#0f0f0f]/80">Отвечу в течение 1 часа</p>
+            </div>
+            <div class="p-6 space-y-4">
+                <p class="text-[#d0d0d0]">Привет! 👋 Расскажите о вашем проекте, и я свяжусь с вами в ближайшее время.</p>
+                <div class="space-y-4">
+                    <a href="https://t.me/pawrun" target="_blank" rel="noopener noreferrer" class="block w-full p-4 rounded-xl bg-[#252525] hover:bg-[#2a2a2a] transition-colors text-center">
+                        <div class="text-sm text-[#a0a0a0] mb-1">Telegram</div>
+                        <div class="font-semibold">@pawrun</div>
+                    </a>
+                    <a href="mailto:anastasiabones@gmail.com" class="block w-full p-4 rounded-xl bg-[#252525] hover:bg-[#2a2a2a] transition-colors text-center">
+                        <div class="text-sm text-[#a0a0a0] mb-1">Email</div>
+                        <div class="font-semibold">anastasiabones@gmail.com</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
