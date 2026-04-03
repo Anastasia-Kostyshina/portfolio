@@ -57,4 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
     document.getElementById('mobileMenu').classList.toggle('hidden');
   });
+
+  const mobileMenu = document.getElementById('mobileMenu');
+  const anchorLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
 });
