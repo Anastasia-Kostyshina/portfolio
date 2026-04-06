@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.querySelector('.mogal-window');
   const iconOpen = btn.querySelector('svg.lucide-message-circle');
   const iconClose = btn.querySelector('svg.lucide-x');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const anchorLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+  const mobileMenuOpen = mobileMenuBtn.querySelector('svg.menu-open');
+  const mobileMenuClose = mobileMenuBtn.querySelector('svg.menu-close');
 
   // Функция открытия модалки
   function openModal() {
@@ -54,12 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0 });
   });
 
-  document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.toggle('hidden');
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenuOpen.classList.toggle('hidden');
+    mobileMenuClose.classList.toggle('hidden');
   });
 
-  const mobileMenu = document.getElementById('mobileMenu');
-  const anchorLinks = mobileMenu.querySelectorAll('a[href^="#"]');
   anchorLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');

@@ -47,8 +47,12 @@
 
                 <!-- Мобильная кнопка меню (гамбургер) -->
                 <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <svg class="menu-open w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-close w-6 h-6 hidden" aria-hidden="true">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
                     </svg>
                 </button>
             </div>
@@ -69,14 +73,14 @@
         </div>
 </header>
     <main class="main">
-        <section class="relative lg:min-h-[90vh] flex items-center justify-center overflow-hidden px-6 pt-[140px] pb-20 lg:px-6 lg:py-20">
+        <section class="relative flex items-center justify-center overflow-hidden px-6 pt-[140px] pb-20 lg:px-6 lg:pt-[15rem] lg:pb-[10rem]">
             <div class="absolute inset-0 opacity-30">
                 <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#06ffd2] rounded-full blur-[150px] animate-pulse"></div>
                 <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#d946ff] rounded-full blur-[150px] animate-pulse" style="animation-delay: 1s;"></div>
             </div>
             <div class="max-w-7xl mx-auto w-full relative z-10">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative order-2 lg:order-1" style="opacity: 1; transform: none;">
+                <div class="grid lg:flex md:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 lg:order-1 max-w-md mx-auto" style="opacity: 1; transform: none;">
                         <div class="relative rounded-3xl overflow-hidden border border-[#252525] shadow-2xl">
                             <div class="absolute inset-0 bg-gradient-to-tr from-[#06ffd2]/20 to-[#d946ff]/20 mix-blend-overlay"></div>
                             <img src="./assets/images/hero-img.jpg" alt="Анастасия" class="w-full h-auto aspect-[3/4] object-cover">
@@ -107,7 +111,7 @@
                             <h1 class="hero-title bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent" style="opacity: 1; transform: none;">Привет, я&nbsp;Анастасия!</h1>
                             <h2 class="section-title text-[#fafafa]" style="opacity: 1; transform: none;">Верстаю лендинги по&nbsp;макетам Figma и Pixso</h2>
                         </div>
-                        <p class="text-[#a0a0a0] max-w-xl" style="opacity: 1; transform: none;">Создаю лендинги и многостраничники на HTML/CSS/JS и WordPress. Типичный лендинг из 7–10&nbsp;блоков — 3–5&nbsp;дней. Pixel-perfect вёрстка, адаптивные и&nbsp;удобные интерфейсы и&nbsp;внимание к&nbsp;деталям.</p>
+                        <p class="text-[#a0a0a0] max-w-2xl" style="opacity: 1; transform: none;">Создаю лендинги и многостраничники на HTML/CSS/JS и WordPress. Типичный лендинг из 7–10&nbsp;блоков — 3–5&nbsp;дней. Pixel-perfect вёрстка, адаптивные и&nbsp;удобные интерфейсы и&nbsp;внимание к&nbsp;деталям.</p>
                         <div class="flex flex-wrap gap-4" style="opacity: 1; transform: none;">
                             <a href="https://t.me/pawrun" class="group grow inline-flex justify-center items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#06ffd2] to-[#d946ff] text-[#0f0f0f] font-medium rounded-xl hover:shadow-lg hover:shadow-[#06ffd2]/50 transition-all duration-300">
                                 Написать в Telegram
@@ -195,7 +199,7 @@
                             <span class="text-sm bg-gradient-to-r from-[#06ffd2] to-[#d946ff] bg-clip-text text-transparent">Услуги</span>
                         </div>
                         <h2 class="section-title mb-4">Что я делаю и сколько это стоит</h2>
-                        <p class="text-[#a0a0a0] max-w-2xl mx-auto">Выберите подходящий пакет услуг. Все проекты включают чистый код, адаптивность и современные технологии.</p>
+                        <p class="text-[#a0a0a0] max-w-2xl mx-auto animate__animated animate__bounce">Выберите подходящий пакет услуг. Все проекты включают чистый код, адаптивность и современные технологии.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="services-item relative group transition-all duration-300">
